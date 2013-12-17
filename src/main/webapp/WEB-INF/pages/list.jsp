@@ -6,7 +6,7 @@
 	
 <table > 
 	<c:forEach items="${list}" var="item">
-       <tr><td> ${item.date}</td><td>${item.content }</td></tr>
+       <tr><td> ${item.key}</td><td>${item.value }</td></tr>
     </c:forEach>
     
   </table>  

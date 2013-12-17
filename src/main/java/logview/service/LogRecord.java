@@ -1,14 +1,12 @@
 package logview.service;
 
-import java.util.Date;
-
 public class LogRecord{
-	Date date;
+	long date;
 	String content;
-	public Date getDate() {
+	public long getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(long date) {
 		this.date = date;
 	}
 	public String getContent() {
@@ -17,7 +15,7 @@ public class LogRecord{
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public LogRecord(Date date,String content){
+	public LogRecord(long date,String content){
 		this.date=date;
 		this.content=content;
 	}
