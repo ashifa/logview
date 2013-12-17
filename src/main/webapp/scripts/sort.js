@@ -83,7 +83,7 @@ function myajax() {
 			track : true
 		},
 		bars : {
-			barWidth:10.5,
+			barWidth:100,
 			show : true,
 			shadowSize : 0
 		},

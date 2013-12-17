@@ -52,8 +52,9 @@ public class LogService {
 			switch (timeUnit.toLowerCase()) {
 			case "hour":
 				cal.set(Calendar.MINUTE, 0);
-			case "second":
+			case "minute":
 				cal.set(Calendar.SECOND, 0);
+			case "second":
 				break;
 			default:
 				System.out.println("param from jason not supported");
@@ -104,8 +105,8 @@ public class LogService {
 					if (m.find() == true) {
 						String found = m.group().trim();
 						Date date = sdf.parse(found);// "Fri Apr 18 17:22:06 2013"
-
-						list.add(new LogRecord(date.getTime(), tmpStr));
+						 
+						list.add(new LogRecord(date.getTime(), tmpStr.split("<br/><br/>",2)));
 
 					}
 				} else {

@@ -2,20 +2,20 @@ package logview.service;
 
 public class LogRecord{
 	long date;
-	String content;
+	String[] content;
 	public long getDate() {
 		return date;
 	}
 	public void setDate(long date) {
 		this.date = date;
 	}
-	public String getContent() {
+	public String[] getContent() {
 		return content;
 	}
-	public void setContent(String content) {
+	public void setContent(String[] content) {
 		this.content = content;
 	}
-	public LogRecord(long date,String content){
+	public LogRecord(long date,String[] content){
 		this.date=date;
 		this.content=content;
 	}

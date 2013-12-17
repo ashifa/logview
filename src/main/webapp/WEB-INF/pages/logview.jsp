@@ -16,6 +16,8 @@ body {
 </style>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/css/envision.min.css'/>" />
+<link rel="stylesheet" type="text/css"
+	href="<c:url value='/css/mystyle.css'/>" />
 <script type="text/javascript"
 	src="<c:url value='/scripts/jquery-1.7.1.min.js'/>">
 	
@@ -33,18 +35,37 @@ body {
 		<div id="container" />
 	</div>
 
-	 <script type="text/javascript" src="<c:url value='/scripts/flotr2.min.js'/>"></script>		
+	<script type="text/javascript"
+		src="<c:url value='/scripts/flotr2.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/scripts/sort.js'/>"></script>
 
 	<hr />
-	<table id="mytable" border="1">
+	<table id="mytable" border="1" class="queryResults">
 		<tr id="head">
 			<th>index</th>
-			<th>log detail</th>
+			<th>message head</th>
+			<th>message body</th>
 		</tr>
- 	<c:forEach items="${list}" var="item" varStatus="stat">
-       <tr id="${item.date}" style="display: none" ><td> ${stat.count}</td><td> ${item.content}</td></tr>
-    </c:forEach>
+		<c:forEach items="${list}" var="item" varStatus="stat">
+			<c:choose>
+				<c:when test="${stat.index%2==0}">
+					<tr id="${item.date}" style="display: none" class="even">
+						<td>${stat.count}</td>
+						<c:forEach items="${item.content}" var="subitem">
+							<td>${subitem}</td>
+						</c:forEach>
+					</tr>
+				</c:when>
+				<c:otherwise>
+					<tr id="${item.date}" style="display: none">
+						<td>${stat.count}</td>
+						<c:forEach items="${item.content}" var="subitem">
+							<td>${subitem}</td>
+						</c:forEach>
+					</tr>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
 	</table>
 
 
