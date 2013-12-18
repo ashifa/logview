@@ -30,7 +30,7 @@ body {
 </head>
 <body>
 	<p id=errInfo></p>
-	<button type=button onClick="myajax()">the button</button>
+
 	<div id="body">
 		<div id="container" />
 	</div>
@@ -41,8 +41,7 @@ body {
 
 	<hr />
 	<table id="mytable" border="1" class="queryResults">
-		<tr id="head">
-			<th>index</th>
+		<tr id="head">			
 			<th>message head</th>
 			<th>message body</th>
 		</tr>
@@ -50,7 +49,7 @@ body {
 			<c:choose>
 				<c:when test="${stat.index%2==0}">
 					<tr id="${item.date}" style="display: none" class="even">
-						<td>${stat.count}</td>
+						
 						<c:forEach items="${item.content}" var="subitem">
 							<td>${subitem}</td>
 						</c:forEach>
@@ -58,7 +57,7 @@ body {
 				</c:when>
 				<c:otherwise>
 					<tr id="${item.date}" style="display: none">
-						<td>${stat.count}</td>
+						
 						<c:forEach items="${item.content}" var="subitem">
 							<td>${subitem}</td>
 						</c:forEach>

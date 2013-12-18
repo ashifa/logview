@@ -11,7 +11,7 @@ function selectCallback(xaxis) {
 }
 
 function showTable(xaxis) {
-	errInfo.innerHTML += "left: " + xaxis.min + " right: " + xaxis.max;
+//	errInfo.innerHTML += "left: " + xaxis.min + " right: " + xaxis.max;
 	if (xaxis.min == undefined)
 		return;
 	$("tr").hide();
@@ -48,14 +48,14 @@ function myajax() {
 		},
 		success : function(data) {
 
-			errInfo.innerHTML += "sucess ";
+/*			errInfo.innerHTML += "sucess ";
 
 			errInfo.innerHTML += data + "<br/>";
 			tobeIter = data;
 
 			for (x in tobeIter) {
 				errInfo.innerHTML += x + ":" + tobeIter[x] + "<br/>";
-			}
+			}*/
 
 			for (i in data.countsY) {
 				d1.push([ data.timeX[i], data.countsY[i] ]);
