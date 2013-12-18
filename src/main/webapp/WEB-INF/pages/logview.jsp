@@ -32,7 +32,7 @@ body {
 	<p id=errInfo></p>
 
 	<div id="body">
-		<div id="container" />
+		<div id="container" ></div>
 	</div>
 
 	<script type="text/javascript"
