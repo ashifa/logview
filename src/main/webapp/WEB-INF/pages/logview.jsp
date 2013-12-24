@@ -29,7 +29,7 @@ body {
 
 </head>
 <body>
-	<p id=errInfo></p>
+	<p id="errInfo"></p>
 
 	<div id="body">
 		<div id="container" ></div>
